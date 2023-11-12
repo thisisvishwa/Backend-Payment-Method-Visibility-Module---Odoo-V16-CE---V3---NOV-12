@@ -1,0 +1,39 @@
+```xml
+<odoo>
+    <data>
+        <!-- Inherit Sale Order Form View -->
+        <record id="view_order_form_inherit_payment_method" model="ir.ui.view">
+            <field name="name">sale.order.form.inherit.payment.method</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="payment_method_id"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- Inherit Sale Order Tree View -->
+        <record id="view_order_tree_inherit_payment_method" model="ir.ui.view">
+            <field name="name">sale.order.tree.inherit.payment.method</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="payment_method_id"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- Inherit Sale Order Search View -->
+        <record id="view_order_search_inherit_payment_method" model="ir.ui.view">
+            <field name="name">sale.order.search.inherit.payment.method</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <filter string="Payment Method" name="groupby_payment_method" domain="[]" context="{'group_by':'payment_method_id'}"/>
+            </field>
+        </record>
+    </data>
+</odoo>
+```
