@@ -1,0 +1,44 @@
+/* Odoo CSS for Enhanced Backend Payment Method Visibility Module */
+
+/* General Styles */
+.oe_application .oe_form_field_payment_method {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Styles for List View */
+.oe_list_content .oe_list_field_cell_payment_method {
+    font-weight: bold;
+}
+
+/* Styles for Form View */
+.oe_form_view .oe_form_field_payment_method {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Styles for Tree View */
+.oe_tree_view .oe_tree_column_payment_method {
+    text-align: center;
+}
+
+/* Styles for Settings View */
+.oe_settings_view .oe_settings_field_payment_method {
+    background-color: #f9f9f9;
+}
+
+/* Styles for Notification */
+.oe_notification .oe_notification_field_payment_method {
+    color: #f00;
+}
+
+/* Styles for Responsive Design */
+@media screen and (max-width: 600px) {
+    .oe_form_field_payment_method,
+    .oe_list_field_cell_payment_method,
+    .oe_tree_column_payment_method,
+    .oe_settings_field_payment_method,
+    .oe_notification_field_payment_method {
+        font-size: 0.9em;
+    }
+}
